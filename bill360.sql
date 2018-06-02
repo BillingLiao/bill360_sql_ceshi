@@ -14,7 +14,7 @@ MySQL - 5.7.17-log : Database - bill
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 CREATE DATABASE /*!32312 IF NOT EXISTS*/`bill` /*!40100 DEFAULT CHARACTER SET utf8 */;
 
-USE `bill`;
+USE `bill360`;
 
 /*Table structure for table `b_acceptance` */
 
@@ -80,7 +80,7 @@ CREATE TABLE `b_bill` (
   `_usable` DECIMAL(18,6) DEFAULT '0.000000' COMMENT '可用额度',
   `_max` VARCHAR(255) DEFAULT NULL COMMENT '票面最大金额（收票单张上限金额(万)）',
   `_min` DECIMAL(18,6) DEFAULT '0.000000' COMMENT '最小金额(收票单张起步金额(万))',
-  `_offer` VARCHAR(255) DEFAULT NULL COMMENT '报价方式',
+  `_offer` INT(11) DEFAULT '0' COMMENT '报价方式',
   `_deductions` DECIMAL(14,2) DEFAULT NULL COMMENT '每十万扣费',
   `_direct` DECIMAL(14,2) DEFAULT NULL COMMIT '直接扣费？%',
   PRIMARY KEY (`_id`),
